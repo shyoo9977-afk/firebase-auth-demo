@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fireboard-login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- font css -->
+    <link rel="stylesheet" href="css/font.css" />
+    
+    <!-- tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="js/dashboard.js" defer></script>
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white shadow-lg rounded-lg w-11/12 sm:w-96 p-6">
+        <h1 class="text-3xl font-bold text-gray-300 text-center mb-6">
+            대시보드 페이지
+        </h1>
+
+        <div class="text-center">
+            <i class="fa-solid fa-circle-check text-green-500 text-5xl mb-4"></i>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">로그인 성공!</h2>
+            <p class="text-gray-600 mb-6">
+            환영합니다! 대시보드에 성공적으로 접근했습니다.
+            </p>
+        </div>
+        
+        <a href="profile.html" class="block w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mb-4 text-center">내 프로필보기</a>
+        <button
+        id="logout-button" class="block w-full bg-gray-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 mb-4 text-center">로그아웃</button>
+        <button
+        id="delete-account-button" class="block w-full bg-red-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 mb-4 text-center">회원탈퇴</button>
+    </div>
+    
+</body>
+</html>

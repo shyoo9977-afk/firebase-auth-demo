@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>firebase-login page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/font.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="js/signup.js" defer></script>
+  </head>
+  <body class="bg-blue-100 flex items-center justify-center h-screen">
+    <div class="bg-white shadow-lg rounded-lg sm:w-96 w-11/12 p-6">
+      <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">회원가입</h1>
+
+      <form id="signup-form" class="space-y-4" autocomplete="off" onsubmit="return false;">
+        <div>
+          <label for="name" class="block text-sm text-gray-700">이름</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="이름을 입력하세요"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm text-gray-700">이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="이메일을 입력하세요"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label for="password" class="block text-sm text-gray-700"
+            >비밀번호</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="비밀번호 입력하세요"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label for="confirm-password" class="block text-sm text-gray-700"
+            >비밀번호 확인</label
+          >
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+            placeholder="비밀번호를 다시 입력하세요"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div id="error-message" class="hidden text-red-500 text-sm text-center"></div>
+
+        <button
+          id="signup-button"
+          type="submit"
+          class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 hover:outline-none focus: ring-2 focus: ring-blue-500 foucs: ring-offset-2"
+        >
+          회원가입
+        </button>
+      </form>
+
+      <p class="mt-6 text-sm text-center text-gray-600">이미 계정이 있으신가요?
+        <a href="login.html" class="text-blue-600 hover:underline">로그인</a>
+      </p>
+    </div>
+  </body>
+</html>

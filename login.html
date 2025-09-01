@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>firebase-login page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="js/login.js" defer></script>
+  </head>
+  <body class="bg-blue-100 flex items-center justify-center h-screen">
+    <div class="bg-white shadow-lg rounded-lg sm:w-96 w-11/12 p-6">
+      <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">로그인</h1>
+
+      <div class="space-y-4">
+        <button
+          id="google-login-btn"
+          class="w-full flex items-center justify-center bg-red-500 text-white py-2 px-4 shadow-md rounded-lg hover:bg-red-600"
+        >
+          <i class="fa-brands fa-google mr-2"></i>Google로 로그인
+        </button>
+        <button
+          id="github-login-btn"
+          class="w-full flex items-center justify-center bg-gray-800 text-white py-2 px-4 shadow-md rounded-lg hover:bg-gray-900"
+        >
+          <i class="fa-brands fa-github mr-2"></i>Github로 로그인
+        </button>
+      </div>
+
+      <div class="relative my-6">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t borer-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+          <span class="px-2 bg-white text-gray-500">또는</span>
+        </div>
+      </div>
+
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="email" class="block text-sm text-gray-700">이메일</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="이메일입력하세요"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
+        </div>
+        <div>
+          <label for="password" class="block text-sm text-gray-700"
+            >비밀번호</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="비밀번호 입력하세요"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div class="flex items-center justify-between">
+          <label class="flex items-center">
+            <input
+              type="checkbox"
+              class="h-4 w-4 text-blue-600 border-gray-300"
+            />
+            <span class="ml-2 text-sm text-gray-700">자동로그인</span>
+          </label>
+          <a
+            href="forgotpassword.html"
+            class="text-sm text-blue-600 hover:underline"
+            >비밀번호를 잊으셨나요?</a
+          >
+        </div>
+
+        <div id="error-message" class="hidden text-red-500 text-sm text-center">
+          서버와의 통신이 불가합니다.
+        </div>
+
+        <button
+          id="login-button"
+          type="button"
+          class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 hover:outline-none focus: ring-2 focus: ring-blue-500 foucs: ring-offset-2"
+        >
+          로그인
+        </button>
+      </form>
+
+      <p class="mt-6 text-sm text-center text-gray-600">계정이 없으신가요?
+        <a href="signup.html" class="text-blue-600 hover:underline">회원가입</a>
+      </p>
+    </div>
+  </body>
+</html>

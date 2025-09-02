@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <p>로그인 중입니다...</p>
+
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get("code");
+
+  if (code) {
+    // 진짜 서버 연동은 없지만 사용자에게는 로그인된 것처럼 처리
+    localStorage.setItem("isLoggedIn", "true");
+
+    // 선택사항: 임시 사용자 정보 저장
+    localStorage.setItem("nickname", "허혜정");
+    localStorage.setItem("email", "blessme.5004@gmail.com");
+
+    // 1.5초 후 대시보드로 이동
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1500);
+  } else {
+    // 로그인 실패 처리
+    alert("로그인에 실패했어요!");
+    window.location.href = "login.html";
+  }
+</script>
+    
+</body>
+</html>
